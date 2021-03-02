@@ -1,0 +1,19 @@
+{
+    "name": "Streamable Downloader",
+    "version": "1.0",
+    "manifest_version": 2,
+    "author": "Emil Krslak",
+    "description": "Extension to download streamable videos with a single click.",
+    "content_scripts": [
+        {
+            "matches": ["*://*.streamable.com/*"],
+            "js": ["popup.js"]
+        }
+    ],
+    "permissions": ["*://*.streamable.com/*"],
+    "browser_action": {
+        "default_popup": "popup.html",
+        "default_title": "Press this icon to download the selected streamable video",
+        "default_icon":"logo.png"
+    }
+}
